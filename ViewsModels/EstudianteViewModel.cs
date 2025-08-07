@@ -17,12 +17,12 @@ namespace Examen.ViewsModels
         private readonly IPageNavigation _naviServ;
 
         [ObservableProperty]
-        private Estudiantes _Estudiante;
+        private Estudiantes _Estudiantes;
 
-        public EstudianteViewModel(IMessageService notiServ, IPageNavigation naviServ)
+        public EstudiantesViewModel(IMessageService notiServ, IPageNavigation naviServ)
         {
             _notiServ = notiServ;
-            _Estudiante = new Estudiantes();
+            _Estudiantes = new Estudiantes();
             _naviServ = naviServ;
         }
 
@@ -55,7 +55,7 @@ namespace Examen.ViewsModels
         [RelayCommand]
         private async Task LimpiarCampos()
         {
-            this.Estudiantes = new Estudiantes();
+            this.Estudiante = new Estudiantes();
 
             await _naviServ.PopAsync();
         }
@@ -64,13 +64,13 @@ namespace Examen.ViewsModels
         {
             try
             {
-                if (string.IsNullOrEmpty(Estudiantes.Cedula))
+                if (string.IsNullOrEmpty(Estudiante.Cedula))
                 {
                     await Application.Current.MainPage.DisplayAlert("Error", "La cédula no puede estar vacía", "Aceptar");
                     return false;
                 }
 
-                if (Estudiantes.Cedula.Length != 10)
+                if (Estudiante.Cedula.Length != 10)
                 {
 
                     await Application.Current.MainPage.DisplayAlert("Error", "La cédula debe tener 10 dígitos", "Aceptar");
@@ -86,7 +86,7 @@ namespace Examen.ViewsModels
         }
         private async Task<bool> ValidarNombre()
         {
-            if (string.IsNullOrEmpty(Estudiantes.Nombre))
+            if (string.IsNullOrEmpty(Estudiante.Nombre))
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "La Nombre no puede estar vacía", "Aceptar");
                 return false;
@@ -95,7 +95,7 @@ namespace Examen.ViewsModels
         }
         private async Task<bool> ValidarFechaNacimiento()
         {
-            if (Estudiantes.FechaNacimiento == DateTime.Now)
+            if (Estudiante.FechaNacimiento == DateTime.Now)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "Escoja la fecha de nacimiento", "Aceptar");
                 _notiServ.showSnakBar("Escoja la fecha de nacimiento");
@@ -107,7 +107,7 @@ namespace Examen.ViewsModels
                 _notiServ.showSnakBar("La fecha de nacimiento no puede ser mayor a la fecha actual");
                 return false;
             }
-            int edad = DateTime.Now.Year - Estudiantes.FechaNacimiento.Year;
+            int edad = DateTime.Now.Year - Estudiante.FechaNacimiento.Year;
             if (edad < 18)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "El estudiante debe ser mayor de edad", "Aceptar");
@@ -118,7 +118,7 @@ namespace Examen.ViewsModels
         }
         private async Task<bool> ValidarSexo()
         {
-            if (string.IsNullOrEmpty(Estudiantes.Sexo))
+            if (string.IsNullOrEmpty(Estudiante.Sexo))
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "El sexo no puede estar vacío", "Aceptar");
                 _notiServ.showSnakBar("El sexo no puede estar vacío");
@@ -129,7 +129,7 @@ namespace Examen.ViewsModels
 
         private void IngresarImagen()
         {
-            if (Estudiantes.Sexo == "Hombre")
+            if (Estudiante.Sexo == "Hombre")
             {
                 Estudiantes.Img = "hombre.jpg";
             }

@@ -7,7 +7,7 @@ namespace Examen.Views;
 public partial class Register : ContentPage
 {
 	private readonly EstudiantesViewModel _viewModel;
-	private IPageNavigation PageNavigation => Application.Current.MainPage.;
+	private IPageNavigation PageNavigation => Application.Current.MainPage.Pa;
 	public Register(EstudiantesViewModel viewModel)
 	{
 		InitializeComponent();
