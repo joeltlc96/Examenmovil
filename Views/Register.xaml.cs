@@ -1,9 +1,17 @@
+using Examen.Services;
+using Examen.ViewsModels;
+using System.Threading.Tasks;
+
 namespace Examen.Views;
 
 public partial class Register : ContentPage
 {
-	public Register()
+	private readonly EstudiantesViewModel _viewModel;
+	private IPageNavigation PageNavigation => Application.Current.MainPage.;
+	public Register(EstudiantesViewModel viewModel)
 	{
 		InitializeComponent();
+		_viewModel = viewModel;
+		this.BindingContext = _viewModel;
 	}
 }

@@ -308,3 +308,5 @@ C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-maccatalyst\maccatalyst
 C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\Examen.dll
 C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\hombre.jpg
 C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\mujer.jpg
+C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\user.png
+C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\Examen.sourcelink.json

@@ -4,13 +4,26 @@
              x:Class="Examen.Views.Register"
              Title="Register">
     <VerticalStackLayout
-        Padding="20">
+        Padding="10">
+        <Image Source="user.png"
+               WidthRequest="200"
+               HeightRequest="200"/>
+
+
+
         <Label Text="Cédula"/>
-        <Entry Placeholder="Ingresa tu CÉDULA aqui" />
+        <Entry 
+            Placeholder="Ingresa tu CÉDULA aqui" 
+            Keyboard="Numeric"/>
+            
+        
         <Label Text="Nombre"/>
-        <Entry Placeholder="Ingresa tu NOMBRES aqui" />
+        <Entry 
+            Placeholder="Ingresa tus NOMBRES aqui" />
+        
         <Label Text="Fecha de Ncimiento"/>
-        <DatePicker Format="dd/MM/yyyy"/>
+        <DatePicker
+            Format="dd/MM/yyyy"/>
 
         <Picker
             Title="Escoja Sexo">
@@ -22,8 +35,8 @@
     
         <Label Text="Trabaja" />
         <HorizontalStackLayout>
-            <RadioButton Content="Sí" GroupName="notificaciones" />
-            <RadioButton Content="No" GroupName="notificaciones" />
+            <RadioButton Content="Sí"  />
+            <RadioButton Content="No"  />
         </HorizontalStackLayout>
 
         <Button x:Name="btnGuardar"

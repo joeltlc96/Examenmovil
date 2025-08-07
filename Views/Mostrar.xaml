@@ -3,10 +3,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Examen.Views.Mostrar"
              Title="Mostrar">
-    <VerticalStackLayout>
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        Padding="50"
+        Spacing="10">
+
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="Informacion del Estudiante"
+            FontSize="Large"
+            FontAttributes="Bold"/>
+
+        <Image Source="{Binding Estudiante.Img}"
+               MaximumHeightRequest="200"/>
+
+        <VerticalStackLayout>
+            <Label Text="Cédula" 
+                   FontSize="Title"
+                   TextDecorations="Underline"/>
+            <Label Text="{Binding Estudiante.Cedula}"
+                   FontSize="Subtitle"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Nombres" 
+                   FontSize="Title"
+                   TextDecorations="Underline"/>
+            <Label Text="{Binding Estudiante.Nombre}"
+                   FontSize="Subtitle"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="FechaNacimiento" 
+                   FontSize="Title"
+                   TextDecorations="Underline"/>
+            <Label Text="{Binding Estudiante.FechaNacimiento, StringFormat='{0:dd/MM/yyyy}'}"
+                   FontSize="Subtitle"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Sexo"
+                   FontSize="Title"
+                   TextDecorations="Underline"/>
+            <Label Text="{Binding Estudiante.Sexo}"
+                   FontSize="Subtitle"/>
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout>
+            <Label Text="Trabaja?" 
+                   FontSize="Title" />
+            <Switch IsToggled="{Binding Estudiante.Trabaja}" />
+        </HorizontalStackLayout>
+
+        <Button Text="Registrar otro Estudiante" 
+                x:Name="btnGuardar"
+                Command="{Binding LimpiarCamposCommand}" />
     </VerticalStackLayout>
 </ContentPage>

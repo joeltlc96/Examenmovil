@@ -321,3 +321,5 @@ C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-ios\iossimulator-x64\re
 C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\mujer.jpg
 C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\hombre.jpg
+C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\user.png
+C:\Users\JKV\source\repos\Examen\Examen\obj\Debug\net8.0-ios\iossimulator-x64\Examen.sourcelink.json

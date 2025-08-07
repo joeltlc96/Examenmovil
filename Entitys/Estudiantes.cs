@@ -22,7 +22,7 @@ namespace Examen.Entitys
             return edad;
         }
 
-        //  Verifica si es mayor o igual a 18
+       
         public bool EsMayorDeEdad()
         {
             return ObtenerEdad() >= 18;

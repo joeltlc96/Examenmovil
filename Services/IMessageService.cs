@@ -8,6 +8,7 @@ namespace Examen.Services
 {
     public interface IMessageService
     {
-        void mostrarSnackbar(string message, int tiempo = 3);
+        void showSnakBar(string mensaje, int duration = 3000);
+        Task ShowAlertAsync(string titulo, string mensaje, string boton);
     }
 }
